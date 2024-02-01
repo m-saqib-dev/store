@@ -1,0 +1,21 @@
+.fav{
+    color: red;
+}
+.not{
+    color: black;
+}
+.co{
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (min-width: 576px) {
+    .w{
+        min-width: 250px;
+        max-width: 350px;
+        height: fit-content;
+    }
+    img{
+        height:200px;
+    }
+    
+  }

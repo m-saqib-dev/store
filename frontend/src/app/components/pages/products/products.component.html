@@ -1,0 +1,43 @@
+<div class="container-xl "  style="min-height: 74vh;display: flex;"  *ngFor="let food of food">
+    <div class="row align-self-center justify-content-center">
+      <div class="col-md-6">
+        <img [src]="food.imageUrl" [alt]="food.name" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2>{{ food.name }}</h2>
+        <p class="text-muted">{{ food.tags }}</p>
+        <p class="lead">{{ food.price }}</p>
+        <p class="text-warning">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+          <span class="text-muted">({{ food.stars }})</span>
+        </p>
+        <p class="text-muted">Cook Time: {{ food.cookTime }}</p>
+        <div class="row">
+
+            <button class="btn btn-primary col-4 mx-2" (click)="addToCart()">Add to Cart</button>
+            
+            <div class="input-group" style="width: 150px;">
+                <button (click)="onMinu()" class="btn btn-outline-secondary" type="button" id="">
+                    -
+                </button>
+                <input
+                type="text"
+                class="form-control px-3"
+                placeholder=""
+                aria-label="Button"
+                aria-describedby=""
+                [value]="qt"
+                />
+                <button (click)="onPlus()" class="btn btn-outline-secondary" type="button" id="">
+                    +
+                </button>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+</div>

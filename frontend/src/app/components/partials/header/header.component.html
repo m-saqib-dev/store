@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <div class="container-xxl">
+    <a routerLink="/" class="navbar-brand"> FlavorFluxe </a>
+    <button class="navbar-toggler mb-2" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      [ngClass]="isNavbarExpanded ? 'collapse' : 'navbar-collapse'"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav gap-1 w-100 justify-content-end">
+        <app-search></app-search>
+      </ul>
+      <ul
+        class="navbar-nav gap-1 w-100 justify-content-end"
+        *ngIf="!isLoggedIn; else notLoggedIn"
+      >
+        <li class="nav-item active">
+          <a
+            class="nav-link bg-secondary rounded text-white btn text-start px-3"
+            href=""
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="btn btn-outline-secondary w-100 rounded text-start px-3"
+            routerLink="/signup"
+            >Sign Up</a
+          >
+        </li>
+      </ul>
+      <ng-template [ngOutletContext]="context" #notLoggedIn>
+        <ul class="navbar-nav gap-2 w-100 justify-content-end">
+          <button class="btn" routerLink="/cart">Cart
+            
+                <span
+                    class="badge bg-primary"
+                    >{{badge}}</span
+                >
+            
+            
+          </button>
+            <div class="dropdown">
+            <button
+              class="btn btn-outline-dark dropdown-toggle text-start w-100"
+              type="button"
+              id="triggerId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              John Doe
+            </button>
+            <div class="dropdown-menu" aria-labelledby="triggerId">
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Orders</a>
+              <div class="dropdown-divider"></div>
+              <a
+                class="dropdown-item bg-danger text-white rounded-bottom"
+                href="#"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </ul>
+      </ng-template>
+    </div>
+  </div>
+</nav>

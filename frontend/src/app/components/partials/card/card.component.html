@@ -1,0 +1,19 @@
+
+    <div class="card-body">
+        <a class="text-decoration-none" routerLink="/food/{{data.id}}">
+            <img [src]="data.imageUrl" class="img-fluid pb-3 w-100 rounded-top object-fit-cover" alt="" />
+            <h3 class="card-title h5">{{ data.name }}</h3>
+        </a>
+        <div class="d-flex justify-content-between">
+            <div>
+                <p class="card-text d-inline-block">{{data.price}}</p>
+                <star-rating class="d-inline-block" [starType]="'svg'" [rating]="data.stars"  [readOnly]="true"></star-rating>
+            </div>
+            <div class="h3 {{data.favorite?'text-danger':'text-black'}}">❤</div>
+            
+        </div>
+            <a class="text-decoration-none" *ngFor="let tags of data.tags" routerLink="/tags/{{data.tags}}"><span
+                class="badge rounded-pill text-bg-primary"
+                >{{tags}}</span
+            ></a>
+    </div>
