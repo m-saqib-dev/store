@@ -4,7 +4,7 @@ export const sample_food:Food[] = [
     {
         id: '1',
         name: 'Pasta with Meat Sauce', // changed from 'Spaghetti Bolognese'
-        price: '$12.99',
+        price: 12.99,
         favorite: true,
         tags: ['Italian', 'Pasta', 'Meat'],
         stars: 4.5,
@@ -14,7 +14,7 @@ export const sample_food:Food[] = [
       {
         id: '2',
         name: 'Chicken Caesar Salad',
-        price: '$9.99',
+        price: 9.99,
         favorite: false,
         tags: ['Salad', 'Chicken', 'Healthy'],
         stars: 4.2,
@@ -24,7 +24,7 @@ export const sample_food:Food[] = [
       {
         id: '3',
         name: 'Margherita Pizza',
-        price: '$14.99',
+        price: 14.99,
         favorite: true,
         tags: ['Italian', 'Pizza', 'Cheese'],
         stars: 4.8,
@@ -34,7 +34,7 @@ export const sample_food:Food[] = [
       {
         id: '4',
         name: 'Pasta with Meat Sauce', // changed from 'Spaghetti Bolognese'
-        price: '$12.99',
+        price: 12.99,
         favorite: true,
         tags: ['Italian', 'Pasta', 'Meat'],
         stars: 4.5,
@@ -44,7 +44,7 @@ export const sample_food:Food[] = [
       {
         id: '5',
         name: 'Chicken Caesar Salad',
-        price: '$9.99',
+        price: 9.99,
         favorite: false,
         tags: ['Salad', 'Chicken', 'Healthy'],
         stars: 4.2,
@@ -54,7 +54,7 @@ export const sample_food:Food[] = [
       {
         id: '6',
         name: 'Margherita Pizza',
-        price: '$14.99',
+        price: 14.99,
         favorite: true,
         tags: ['Italian', 'Pizza', 'Cheese'],
         stars: 4.8,

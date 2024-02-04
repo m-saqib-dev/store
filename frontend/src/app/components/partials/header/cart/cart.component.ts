@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
+import { Food } from 'src/app/shared/models/food';
 interface Product {
-  id: string;
-  name: string;
-  price: string;
+  food:Food;
+  price: number;
   quantity: number;
 }
 @Component({
@@ -12,9 +12,10 @@ interface Product {
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
-  cartItems!:Product
+  cartItems:Product[]=[]
   constructor(private cartService:CartService){
-    this.cartItems = cartService.getCartItems()[0];
+    cartService.getCartObservable().subscribe(item=>this.cartItems=item.items)
+    console.log(this.cartItems)
   }
   click(){
     console.log(this.cartItems)

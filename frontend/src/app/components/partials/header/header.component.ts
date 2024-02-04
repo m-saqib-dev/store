@@ -14,7 +14,7 @@ export class HeaderComponent {
   badge:number=0;
   constructor(private authService:AuthService,private cartService:CartService){
     this.isLoggedIn=authService.isLogged()
-    this.badge=cartService.getCartItems().length
+    cartService.getCartObservable().subscribe(item=>this.badge=item.totalCount)
   }
   
   toggleNavbar() {
