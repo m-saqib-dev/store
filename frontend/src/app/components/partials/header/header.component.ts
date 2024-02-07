@@ -23,4 +23,5 @@ export class HeaderComponent {
   toggleProfileDropdown() {
     this.isProfileDropdownOpen = !this.isProfileDropdownOpen;
   }
+  
 }

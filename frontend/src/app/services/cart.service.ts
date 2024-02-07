@@ -4,13 +4,6 @@ import { Cart } from '../shared/models/cart';
 import { Food } from '../shared/models/food';
 import { CartItem } from '../shared/models/cartItems';
 
-interface Product {
-  id: string;
-  name: string;
-  price: string;
-  quantity: number;
-}
-
 @Injectable({
   providedIn: 'root'
 })

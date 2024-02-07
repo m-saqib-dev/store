@@ -1,0 +1,64 @@
+<app-not-found *ngIf="!cartItems || !cartItems.items.length" reset="/" title="cart is empty"
+    btnTxt="Add items to cart"></app-not-found>
+<div class=" container-fluid">
+    <div class="row">
+        <div class="col-md-8 p-0 border" style="height: 80vh;">
+            <!-- Horizontal under breakpoint -->
+            <ul class="list-group h-100 gap-2">
+                <li class="list-group-item p-0 d-flex" style="height: 80px;" *ngFor="let item of cartItems.items">
+                    <div class="d-flex w-100 align-items-center px-1">
+                        <div class="form-check">
+                            <input class="btn-checkbox rounded-circle form-check-input" type="checkbox" value="" id="" />
+                        </div>
+                        
+                        
+                        <img
+                        [src]="item.food.imageUrl"
+                        class="img-fluid w-25 h-100 object-fit-contain"
+                        [alt]="item.food.name"
+                        />
+                        <div class="w-100 d-flex flex-column gap-2">
+                            <h6 class="w-100 px-2 text-truncate text-danger fw-bold">{{item.food.name}}</h6>
+                            <hr class="m-0 p-0">
+                            <div class="d-flex justify-content-around align-items-center w-100" style="height: 30px;">
+                                <span class="fw-lighter text-danger p-0 m-0">{{item.food.price|currency}}</span>
+                                <div class=" p-0 d-flex align-items-center">
+                                    <button class="btn btn-sm fs-5 border-0 p-0">-</button>
+                                    <input class="form-check-input text-center" style="width: 3cap;" type="text" [value]="item.quantity">
+                                    <button class="fs-5 btn btn-sm border-0 p-0">+</button>
+                                    <button class="btn btn-sm mx-4 fw-bold text-bg-danger" (click)="removeFromCart(item.food.id)">X</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+        
+      
+    <div class="d-flex align-items-end col-md-4 flex-column rounded shadow-sm align-items-center" style="height: 100%;">
+        <ul class="list-group h-100">
+            <li class=" p-0 m-0 d-flex" *ngFor="let item of cartItems.items">
+                <p>{{item.food.name}}</p> &nbsp; <strong>x</strong> {{item.quantity}}
+            </li>
+        </ul>
+        <div class=" text-center w-100">
+
+            <h6 class="text-secondary">
+                Quantity :
+                <span class="text-primary">
+                    {{ cartItems.totalCount }}
+                </span>
+            </h6>
+            <h6 class="text-secondary">
+                Total price :
+                <span class="text-primary">
+                    {{ cartItems.totalPrice | currency }}
+                </span>
+            </h6>
+            <a class="btn btn-outline-primary w-100">Proceed to checkout</a>
+        </div>
+    </div>
+</div>
+</div>

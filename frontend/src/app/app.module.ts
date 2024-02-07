@@ -1,3 +1,4 @@
+import { CartComponent } from './components/pages/cart/cart.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,7 +12,7 @@ import { SearchComponent } from './components/partials/search/search.component';
 import { SearchResultComponent } from './components/pages/search-result/search-result.component';
 import { CardComponent } from './components/partials/card/card.component';
 import { ProductsComponent } from './components/pages/products/products.component';
-import { CartComponent } from './components/partials/header/cart/cart.component';
+import { NotFoundComponent } from './components/partials/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CartComponent } from './components/partials/header/cart/cart.component'
     CardComponent,
     ProductsComponent,
     CartComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

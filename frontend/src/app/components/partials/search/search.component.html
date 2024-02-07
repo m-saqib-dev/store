@@ -1,13 +1,13 @@
 <form class="d-flex my-2 my-lg-0">
     <input
     #s
-    class="form-control me-sm-2"
+    class="form-control-plaintext me-sm-2"
     type="text"
     placeholder="search"
     [value]="s.value"
     (change)="s.value"
     />
-    <button (click)="search(s.value)" class="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Search
+    <button (click)="search(s.value)" class="btn my-2 my-sm-0" type="submit">
+        <span class="pi pi-search"></span>
     </button>
 </form>
