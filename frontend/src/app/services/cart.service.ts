@@ -10,6 +10,8 @@ import { CartItem } from '../shared/models/cartItems';
 export class CartService {
   private cart:Cart = this.getCartFromLocalStorage();
   private cartSubject:BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
+  
+  str:string="string"
   constructor(){}
   addToCart(food:Food):void{
     let cartItem = this.cart.items.find(item=>item.food.id === food.id)
@@ -38,6 +40,7 @@ export class CartService {
 
   getCartObservable():Observable<Cart>{
     return this.cartSubject.asObservable();
+
   }
 
   private setCartToLocalStorage():void {
@@ -53,5 +56,5 @@ export class CartService {
     const cartJson = localStorage.getItem('Cart');
     return cartJson? JSON.parse(cartJson): new Cart();
   }
-
+  
 }

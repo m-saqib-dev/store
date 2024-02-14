@@ -1,65 +1,114 @@
 import { Food } from "./app/shared/models/food";
+import { Tags } from "./app/shared/models/tags";
 
 export const sample_food:Food[] = [
-    {
-        id: '1',
-        name: 'Pasta with Meat Sauce', // changed from 'Spaghetti Bolognese'
-        price: 12.99,
-        favorite: true,
-        tags: ['Italian', 'Pasta', 'Meat'],
-        stars: 4.5,
-        imageUrl: 'assets/pasta.jpg',
-        cookTime: '30 minutes'
-      },
-      {
-        id: '2',
-        name: 'Chicken Caesar Salad',
-        price: 9.99,
-        favorite: false,
-        tags: ['Salad', 'Chicken', 'Healthy'],
-        stars: 4.2,
-        imageUrl: 'assets/csalad.jpeg',
-        cookTime: '20 minutes'
-      },
-      {
-        id: '3',
-        name: 'Margherita Pizza',
-        price: 14.99,
-        favorite: true,
-        tags: ['Italian', 'Pizza', 'Cheese'],
-        stars: 4.8,
-        imageUrl: 'assets/th.jpeg',
-        cookTime: '25 minutes'
-      },
-      {
-        id: '4',
-        name: 'Pasta with Meat Sauce', // changed from 'Spaghetti Bolognese'
-        price: 12.99,
-        favorite: true,
-        tags: ['Italian', 'Pasta', 'Meat'],
-        stars: 4.5,
-        imageUrl: 'assets/pasta.jpg',
-        cookTime: '30 minutes'
-      },
-      {
-        id: '5',
-        name: 'Chicken Caesar Salad',
-        price: 9.99,
-        favorite: false,
-        tags: ['Salad', 'Chicken', 'Healthy'],
-        stars: 4.2,
-        imageUrl: 'assets/csalad.jpeg',
-        cookTime: '20 minutes'
-      },
-      {
-        id: '6',
-        name: 'Margherita Pizza',
-        price: 14.99,
-        favorite: true,
-        tags: ['Italian', 'Pizza', 'Cheese'],
-        stars: 4.8,
-        imageUrl: 'assets/th.jpeg',
-        cookTime: '25 minutes'
-      }
+  {
+    id: "margherita123",
+    name: "Margherita",
+    price: 10.99,
+    favorite: true,
+    tags: ["Classic", "Vegetarian"],
+    stars: 4.5,
+    imageUrl: "assets/pizza/mar.jpeg",
+    cookTime: "20 minutes",
+  },
+  {
+    id: "pepperoni456",
+    name: "Pepperoni",
+    price: 12.99,
+    favorite: false,
+    tags: ["Meat", "Spicy"],
+    stars: 4.8,
+    imageUrl: "assets/pizza/pepr.jpeg",
+    cookTime: "25 minutes",
+  },
+  {
+    id: "hawaiian789",
+    name: "Hawaiian",
+    price: 11.49,
+    favorite: true,
+    tags: ["Pineapple", "Ham"],
+    stars: 4.3,
+    imageUrl: "assets/pizza/hawai.jpeg",
+    cookTime: "22 minutes",
+  },
+  {
+    id: "veggie101",
+    name: "Veggie Supreme",
+    price: 13.99,
+    favorite: true,
+    tags: ["Vegetarian", "Colorful"],
+    stars: 4.6,
+    imageUrl: "assets/pizza/veggi.jpeg",
+    cookTime: "30 minutes",
+  },
+  {
+    id: "bbq777",
+    name: "BBQ Chicken",
+    price: 14.99,
+    favorite: false,
+    tags: ["Chicken", "Smoky"],
+    stars: 4.2,
+    imageUrl: "assets/pizza/bbqch.jpeg",
+    cookTime: "28 minutes",
+  },{
+    id: "mushroom222",
+    name: "Mushroom Delight",
+    price: 11.99,
+    favorite: true,
+    tags: ["Vegetarian", "Savory"],
+    stars: 4.4,
+    imageUrl: "assets/pizza/MushroomDelight.jpeg",
+    cookTime: "23 minutes",
+  },
+  // {
+  //   id: "supreme333",
+  //   name: "Supreme Feast",
+  //   price: 15.49,
+  //   favorite: false,
+  //   tags: ["Meat", "Loaded"],
+  //   stars: 4.7,
+  //   imageUrl: "https://example.com/supreme_feast.jpg",
+  //   cookTime: "32 minutes",
+  // },
+  // {
+  //   id: "pesto444",
+  //   name: "Pesto Paradise",
+  //   price: 13.79,
+  //   favorite: true,
+  //   tags: ["Herby", "Unique"],
+  //   stars: 4.9,
+  //   imageUrl: "https://example.com/pesto_paradise.jpg",
+  //   cookTime: "27 minutes",
+  // },
+  // {
+  //   id: "fourcheese555",
+  //   name: "Four Cheese Delight",
+  //   price: 14.29,
+  //   favorite: true,
+  //   tags: ["Cheesy", "Indulgent"],
+  //   stars: 4.6,
+  //   imageUrl: "https://example.com/four_cheese.jpg",
+  //   cookTime: "29 minutes",
+  // },
+  // {
+  //   id: "spinach666",
+  //   name: "Spinach Supreme",
+  //   price: 12.99,
+  //   favorite: false,
+  //   tags: ["Vegetarian", "Nutritious"],
+  //   stars: 4.3,
+  //   imageUrl: "https://example.com/spinach_supreme.jpg",
+  //   cookTime: "26 minutes",
+  // }
     
 ]
+export const sample_Tag:Tags[] = [
+  {name:"All"},
+  {name:"Vegetarian"},
+  {name:"Nutritious"},
+  {name:"Cheesy"},
+  {name:"Unique"},
+  {name:"Meat"},
+  {name:"Loaded"},
+] 

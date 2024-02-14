@@ -1,3 +1,4 @@
+import { Tags } from 'src/app/shared/models/tags';
 import { ActivatedRoute } from '@angular/router';
 import { AuthService } from './../../../services/auth.service';
 import { FoodService } from './../../../services/food.service';
@@ -12,8 +13,11 @@ import { Food } from 'src/app/shared/models/food';
 export class HomeComponent {
   foods:Food[]=[]
   isLoggedIn=true;
+  tags:Tags[]=[]
   constructor(private foodService:FoodService,private authService:AuthService,activatedRoute:ActivatedRoute){
+    
     activatedRoute.params.subscribe((params)=>{
+      
       if (params['searchTerm']){
         this.foods=foodService.getFoodBySearchTerm(params['searchTerm'])
       }

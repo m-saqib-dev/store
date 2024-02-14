@@ -13,6 +13,7 @@ export class CartComponent {
   constructor(private cartService:CartService){
     cartService.getCartObservable()
     .subscribe(item=>this.cartItems=item)
+    
   }
   click(){
     console.log(this.cartItems)

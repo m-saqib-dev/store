@@ -13,6 +13,7 @@ import { SearchResultComponent } from './components/pages/search-result/search-r
 import { CardComponent } from './components/partials/card/card.component';
 import { ProductsComponent } from './components/pages/products/products.component';
 import { NotFoundComponent } from './components/partials/not-found/not-found.component';
+import { TagComponent } from './components/partials/tag/tag.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NotFoundComponent } from './components/partials/not-found/not-found.com
     ProductsComponent,
     CartComponent,
     NotFoundComponent,
+    TagComponent,
   ],
   imports: [
     BrowserModule,

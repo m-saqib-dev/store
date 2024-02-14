@@ -1,0 +1,3 @@
+<div class="d-flex py-2 gap-1 justify-content-center" *ngIf="tags">
+    <a *ngFor="let tag of tags" class="text-decoration-none badge rounded-pill bg-primary-subtle border border-dark text-dark" routerLink="/tag/{{tag.name}}">{{tag.name}}</a>    
+</div>

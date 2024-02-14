@@ -10,10 +10,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SearchResultComponent {
   foods!:Food[]
+  message!:string;
   constructor(private foodService:FoodService,activatedRoute:ActivatedRoute){
     activatedRoute.params.subscribe((params)=>{
       if (params['searchTerm']){
         this.foods=foodService.getFoodBySearchTerm(params['searchTerm'])
+        this.message = "search result not found"
+      }else if (params['tag']) {
+        this.foods = foodService.getFoodByTag(params['tag'])
+        this.message = "tag not found"
       }
     else{
       this.foods=foodService.getAll()
