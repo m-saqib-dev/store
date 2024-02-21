@@ -1,76 +1,24 @@
-<nav class="navbar navbar-expand navbar-light bg-light">
-  <div class="container-xxl">
-    <a routerLink="/" class="navbar-brand"> FlavorFluxe </a>
-    <button class="navbar-toggler mb-2" type="button" (click)="toggleNavbar()">
+<nav class="navbar navbar-expand-md container-fluid">
+  <div class="container-fluid">
+
+  
+  <a class="navbar-brand" href="#">Flavorfulxe</a>
+    <button class="navbar-toggler p-2 fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div
-      [ngClass]="isNavbarExpanded ? 'collapse' : 'navbar-collapse'"
-      id="navbarSupportedContent"
-    >
-      <ul class="navbar-nav gap-1 w-100 justify-content-end">
-        <app-search></app-search>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item"><a class="nav-link active" routerLink="/login">Login</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/cart">SignUp</a></li>
       </ul>
-
-      <ul
-        class="navbar-nav gap-1 w-100 justify-content-end"
-        *ngIf="!isLoggedIn; else notLoggedIn"
-      >
-        <li class="nav-item active">
-          <a
-            class="nav-link bg-secondary rounded text-white btn text-start px-3"
-            href=""
-            >Login</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="btn btn-outline-secondary w-100 rounded text-start px-3"
-            routerLink="/signup"
-            >Sign Up</a
-          >
-        </li>
+      <ul class="navbar-nav ms-auto" *ngIf="isLoggedIn">
+        <li class="nav-item"><a class="nav-link active" routerLink="/cart">cart
+          <span class="badge bg-danger rounded-circle">{{badge}}</span>
+        </a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/profile">john
+          
+        </a></li>
       </ul>
-      <ng-template [ngOutletContext]="context" #notLoggedIn>
-        <ul class="navbar-nav gap-2 w-100 justify-content-end">
-          <button class="btn position-relative border-0" routerLink="/cart">
-            <i class="pi pi-shopping-cart fs-1 text-secondary "></i>
-            <span
-              class="badge text-danger fw-bold position-absolute translate-middle-x"
-              style="font-size: 1rem; right: 50%; left: 50%; top: -20%"
-              >{{ badge }}</span
-            >
-          </button>
-          <div class="position-relative">
-            <button
-              class="btn w-100 p-0 m-0 border-0"
-              type="button"
-              id="triggerId"
-              data-bs-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="true"
-              (click)="toggleProfileDropdown()"
-            >
-              <i class="pi pi-user fs-1 text-danger"></i>
-            </button>
-
-            <div
-              *ngIf="isProfileDropdownOpen"
-              class="position-absolute pt-3 z-3 d-flex flex-column px-2"
-              style="right: 0px; height: 150px"
-              aria-labelledby="triggerId"
-            >
-              <a class="btn" href="#">Profile</a>
-              <a class="btn" href="#">Orders</a>
-              <div class="dropdown-divider"></div>
-              <a class="btn bg-danger text-white rounded-bottom" href="#"
-                >Logout</a
-              >
-            </div>
-            
-          </div>
-        </ul>
-      </ng-template>
     </div>
   </div>
 </nav>

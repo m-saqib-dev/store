@@ -1,0 +1,46 @@
+<button class="btn position-absolute mt-2" (click)="goBack()" title="go-back" aria-label="go-back">
+<i class="pi pi-angle-left fs-4 text-secondary border" aria-label="go-back"></i>
+</button>
+<form method="post" class="d-flex align-items-center min-vh-100" >
+    <fieldset class="container-sm" style="max-width: 400px;">
+        <legend>Login</legend>
+        <div class="mb-3">
+            <label for="" class="form-label">Email</label>
+            <input
+                type="email"
+                class="form-control"
+                name=""
+                id=""
+                aria-describedby="emailHelpId"
+                placeholder="abc@mail.com"
+            />
+            <small id="emailHelpId" class="form-text text-muted"
+                >Help text</small
+            >
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                placeholder=""
+            />
+        </div>
+        <div class="btn-group justify-content-around w-100 px-5" role="group" aria-label="Remamber me and forgot password">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" checked id="remamber-me" />
+                <label class="form-check-label" for="remamber-me"> Remamber me</label>
+            </div>
+            <a class="text-decoration-none" href="">Forgot password?</a>
+        </div>
+        <button
+            type="submit"
+            class="btn btn-primary w-100 mt-3"
+        >
+            Login
+        </button>
+        
+    </fieldset>
+</form>

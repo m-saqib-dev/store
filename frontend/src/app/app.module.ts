@@ -14,6 +14,7 @@ import { CardComponent } from './components/partials/card/card.component';
 import { ProductsComponent } from './components/pages/products/products.component';
 import { NotFoundComponent } from './components/partials/not-found/not-found.component';
 import { TagComponent } from './components/partials/tag/tag.component';
+// import { LoginComponent } from './components/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TagComponent } from './components/partials/tag/tag.component';
     CartComponent,
     NotFoundComponent,
     TagComponent,
+    // LoginComponent,
   ],
   imports: [
     BrowserModule,
